@@ -224,6 +224,39 @@
 
         .product-card:hover::before { opacity: 1; }
 
+        /* Card image */
+        .card-image {
+            width: 100%;
+            aspect-ratio: 16/10;
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .card-image img { transform: scale(1.05); }
+
+        .card-image-fallback {
+            font-size: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-emoji { display: none; }
+
         .card-rank {
             position: absolute;
             top: 16px;
@@ -404,7 +437,7 @@
             
         <article class="product-card" style="animation-delay: 0.05s">
             <div class="card-rank">#1</div>
-            <div class="card-emoji">🔥</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/7561030/pexels-photo-7561030.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="best birthday gift for wife"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Google Trends</span>
@@ -422,7 +455,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.1s">
             <div class="card-rank">#2</div>
-            <div class="card-emoji">🔥</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/5563664/pexels-photo-5563664.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="best skin care products"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Google Trends</span>
@@ -440,7 +473,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.15000000000000002s">
             <div class="card-rank">#3</div>
-            <div class="card-emoji">🔥</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/6670943/pexels-photo-6670943.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="best supplement for weight loss"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Google Trends</span>
@@ -458,7 +491,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.2s">
             <div class="card-rank">#4</div>
-            <div class="card-emoji">⚡</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/7430701/pexels-photo-7430701.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Blink Plus Plan with monthly auto-renewal"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Electronics</span>
@@ -476,7 +509,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.25s">
             <div class="card-rank">#5</div>
-            <div class="card-emoji">⚡</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/18525574/pexels-photo-18525574.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Apple EarPods (USB-C) ​​​​​​​"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Electronics</span>
@@ -494,7 +527,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.30000000000000004s">
             <div class="card-rank">#6</div>
-            <div class="card-emoji">⚡</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/30981655/pexels-photo-30981655.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Apple AirPods 4 Wireless Earbuds, Bluetooth Headphones, Personalized Spatial Audio, Sweat- and Water-Resistant, USB-C Charging Case, H2 Chip, Up to 30 Hours of Battery Life"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Electronics</span>
@@ -512,7 +545,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.35000000000000003s">
             <div class="card-rank">#7</div>
-            <div class="card-emoji">⚡</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/5269735/pexels-photo-5269735.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="JBL Tune 520BT - Wireless On-Ear Headphones, Up to 57H Battery Life and Speed Charge, Lightweight, Comfortable and Foldable Design, Hands-Free Calls with Voice Aware (Black)"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Electronics</span>
@@ -530,7 +563,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.4s">
             <div class="card-rank">#8</div>
-            <div class="card-emoji">⚡</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/35380637/pexels-photo-35380637.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Blink Outdoor 4 – Wireless smart security camera, two-year battery life, 1080p HD day and infrared night live view, two-way talk. Required Sync Module not included – Add-on camera"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Electronics</span>
@@ -548,7 +581,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.45s">
             <div class="card-rank">#9</div>
-            <div class="card-emoji">🍳</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/212269/pexels-photo-212269.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Queen Size 4 Piece Sheet Set - Comfy Breathable & Cooling Sheets - Hotel Luxury Bed Sheets for Women & Men - Deep Pockets, Easy-Fit, Extra Soft & Wrinkle Free Sheets - White Oeko-Tex Bed Sheet Set"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Kitchen</span>
@@ -566,7 +599,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.5s">
             <div class="card-rank">#10</div>
-            <div class="card-emoji">🍳</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/5380003/pexels-photo-5380003.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Majestic Pure Peppermint Essential Oil - Huge 118 ml - 100% Pure and Natural Oil for Soap Making Scent- Premium Grade with Glass Dropper"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Kitchen</span>
@@ -584,7 +617,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.55s">
             <div class="card-rank">#11</div>
-            <div class="card-emoji">🍳</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/212269/pexels-photo-212269.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Utopia Bedding Queen Bed Sheets Set – 4 Piece Queen Size Sheets, Soft Breathable Microfiber, Deep Pocket, Fade & Wrinkle Resistant, 1 Flat Sheet 1 Fitted Sheet 2 Pillowcases – Oeko Tex, Grey"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Kitchen</span>
@@ -602,7 +635,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.6000000000000001s">
             <div class="card-rank">#12</div>
-            <div class="card-emoji">🍳</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/10600087/pexels-photo-10600087.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Utopia Bedding Waterproof Mattress Protector Queen Size, Bamboo Viscose Mattress Cover 200 GSM, Fits 17 Inches Deep, Breathable, Fitted Style with Stretchable Pockets"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Kitchen</span>
@@ -620,7 +653,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.65s">
             <div class="card-rank">#13</div>
-            <div class="card-emoji">🍳</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/8004540/pexels-photo-8004540.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Melitta 625000 Bamboo Super Premium Coffee Filters, Green"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Kitchen</span>
@@ -638,7 +671,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.7000000000000001s">
             <div class="card-rank">#14</div>
-            <div class="card-emoji">🍳</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/3682240/pexels-photo-3682240.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Utopia Bedding Bed Pillows for Sleeping Queen Size (Grey), Set of 2, Cooling Hotel Quality, Gusseted Pillow for Back, Stomach or Side Sleepers"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Kitchen</span>
@@ -656,7 +689,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.75s">
             <div class="card-rank">#15</div>
-            <div class="card-emoji">🍳</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/8753100/pexels-photo-8753100.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Zefy 40 Colors Resin Jelly Rhinestones for Bedazzling, 3mm 32000 Pcs Flatback Gems for Crafting, Bedazzling Kit with 3Pcs B7000 Glue for Clothing Shoes Nail Book Diamond Art"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Kitchen</span>
@@ -674,7 +707,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.8s">
             <div class="card-rank">#16</div>
-            <div class="card-emoji">✨</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/9775329/pexels-photo-9775329.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="grace & stella Under Eye Mask - Birthday Gifts for Women, Gifts for Mom, Under Eye Patches to Reduce Dark Circles, Puffy Eyes, Eye Bags, Wrinkles, Travel Size Toiletries, Vegan (24 Pairs, Gold)"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Health & Beauty</span>
@@ -692,7 +725,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.8500000000000001s">
             <div class="card-rank">#17</div>
-            <div class="card-emoji">✨</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/17511746/pexels-photo-17511746.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Botanic Hearth Rosemary Oil for Hair Growth | Strengthening Biotin, Jojoba, Castor Hair Growth Oil for frizzy hair | Dry, Damaged Scalp Treatment | Color Safe | All Hair Types | 6.7 Fl Oz"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Health & Beauty</span>
@@ -710,7 +743,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.9s">
             <div class="card-rank">#18</div>
-            <div class="card-emoji">✨</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/7321646/pexels-photo-7321646.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="The Ordinary Niacinamide 10% + Zinc 1%, Smoothing Serum for Blemish-Prone Skin, 30ml"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Health & Beauty</span>
@@ -728,7 +761,7 @@
         </article>
         <article class="product-card" style="animation-delay: 0.9500000000000001s">
             <div class="card-rank">#19</div>
-            <div class="card-emoji">✨</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/15499663/pexels-photo-15499663.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Boka Fluoride Free Toothpaste, Nano Hydroxyapatite Toothpaste, Appropriate for Sensitive Teeth - for Adult Oral Care - Ela Mint Flavor, 4 Fl Oz (113g) 1Pk"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Health & Beauty</span>
@@ -746,7 +779,7 @@
         </article>
         <article class="product-card" style="animation-delay: 1.0s">
             <div class="card-rank">#20</div>
-            <div class="card-emoji">✨</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/4812645/pexels-photo-4812645.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Rael Miracle Invisible Spot Cover - Absorbing Cover, Hydrocolloid Patch, Korean Skin Care, Facial Stickers, 2 Sizes (96 Count)"></div>
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-category">Health & Beauty</span>
@@ -775,6 +808,7 @@
             shopping through them supports this channel at no extra cost to you.
             <br><br>
             <a href="https://linktr.ee/thetrendmarketplace" target="_blank">🔗 All Links</a>
+            &nbsp;·&nbsp; Photos via <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a>
         </p>
     </footer>
 </body>
