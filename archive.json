@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-05-01",
+    "url": "2026-05-01.html",
+    "product_count": 9
+  },
+  {
+    "date": "2026-04-30",
+    "url": "2026-04-30.html",
+    "product_count": 9
+  },
+  {
+    "date": "2026-04-29",
+    "url": "2026-04-29.html",
+    "product_count": 10
+  },
+  {
+    "date": "2026-04-28",
+    "url": "2026-04-28.html",
+    "product_count": 10
+  },
+  {
     "date": "2026-04-27",
     "url": "2026-04-27.html",
     "product_count": 10
