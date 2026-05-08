@@ -828,7 +828,7 @@
         </article>
             </div>
         </main>
-        <aside class="archive-sidebar">
+        <aside class="archive-sidebar" id="archive-sidebar" data-current-date="2026-04-22">
     <details class="archive-nav" id="archiveNav" open>
       <summary class="archive-nav-summary">Past 30 Days</summary>
       <div class="archive-nav-list">
@@ -853,9 +853,44 @@
     </footer>
     <script>
         (function () {
-            /* On mobile, collapse the archive nav by default */
-            var nav = document.getElementById('archiveNav');
-            if (nav && window.innerWidth < 900) nav.removeAttribute('open');
+            var aside = document.getElementById('archive-sidebar');
+            var currentDate = aside ? (aside.getAttribute('data-current-date') || '') : '';
+            var monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+            function applyMobileCollapse() {
+                var nav = document.getElementById('archiveNav');
+                if (nav && window.innerWidth < 900) nav.removeAttribute('open');
+            }
+
+            function render(manifest) {
+                if (!aside || !manifest || !manifest.length) return;
+                var mostRecent = manifest[0].date;
+                var items = manifest.map(function (entry) {
+                    var d = entry.date || '';
+                    var parts = d.split('-');
+                    var label = (parts.length === 3)
+                        ? monthNames[parseInt(parts[1], 10) - 1] + ' ' + parts[2] + ', ' + parts[0]
+                        : d;
+                    var href = (d === mostRecent) ? 'index.html' : (entry.url || (d + '.html'));
+                    var active = (d === currentDate) ? ' class="archive-active"' : '';
+                    var count = entry.product_count != null ? entry.product_count : 0;
+                    return '<a href="' + href + '"' + active + '>'
+                        + '<span class="archive-date-label">' + label + '</span>'
+                        + '<span class="archive-date-count">' + count + '</span>'
+                        + '</a>';
+                }).join('\n');
+                aside.innerHTML =
+                    '<details class="archive-nav" id="archiveNav" open>'
+                    + '<summary class="archive-nav-summary">Past 30 Days</summary>'
+                    + '<div class="archive-nav-list">' + items + '</div>'
+                    + '</details>';
+            }
+
+            fetch('archive.json', { cache: 'no-cache' })
+                .then(function (r) { return r.ok ? r.json() : null; })
+                .then(function (m) { if (m) render(m); })
+                .catch(function () { /* keep baked-in fallback */ })
+                .then(applyMobileCollapse);
         })();
     </script>
 </body>
