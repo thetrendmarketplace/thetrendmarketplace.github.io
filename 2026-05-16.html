@@ -567,7 +567,7 @@
     <details class="archive-nav" id="archiveNav" open>
       <summary class="archive-nav-summary">Past 30 Days</summary>
       <div class="archive-nav-list">
-        <a href="index.html" class="archive-active"><span class="archive-date-label">May 16, 2026</span><span class="archive-date-count">4</span></a>
+        <a href="index.html" class="archive-active"><span class="archive-date-label">May 16, 2026</span><span class="archive-date-count">22</span></a>
         <a href="2026-05-15.html"><span class="archive-date-label">May 15, 2026</span><span class="archive-date-count">5</span></a>
         <a href="2026-05-14.html"><span class="archive-date-label">May 14, 2026</span><span class="archive-date-count">13</span></a>
         <a href="2026-05-13.html"><span class="archive-date-label">May 13, 2026</span><span class="archive-date-count">20</span></a>
@@ -633,7 +633,10 @@
                         : d;
                     var href = (d === mostRecent) ? 'index.html' : (entry.url || (d + '.html'));
                     var active = (d === currentDate) ? ' class="archive-active"' : '';
-                    var count = entry.product_count != null ? entry.product_count : 0;
+                    var isMostRecent = d === mostRecent;
+                    var count = (isMostRecent && entry.index_product_count != null)
+                        ? entry.index_product_count
+                        : (entry.product_count != null ? entry.product_count : 0);
                     return '<a href="' + href + '"' + active + '>'
                         + '<span class="archive-date-label">' + label + '</span>'
                         + '<span class="archive-date-count">' + count + '</span>'
