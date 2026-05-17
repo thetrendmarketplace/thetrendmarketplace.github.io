@@ -611,7 +611,15 @@
     <details class="archive-nav" id="archiveNav" open>
       <summary class="archive-nav-summary">Past 30 Days</summary>
       <div class="archive-nav-list">
-        <a href="index.html" class="archive-active"><span class="archive-date-label">May 08, 2026</span><span class="archive-date-count">6</span></a>
+        <a href="index.html"><span class="archive-date-label">May 16, 2026</span><span class="archive-date-count">22</span></a>
+        <a href="2026-05-15.html"><span class="archive-date-label">May 15, 2026</span><span class="archive-date-count">5</span></a>
+        <a href="2026-05-14.html"><span class="archive-date-label">May 14, 2026</span><span class="archive-date-count">13</span></a>
+        <a href="2026-05-13.html"><span class="archive-date-label">May 13, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-05-12.html"><span class="archive-date-label">May 12, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-05-11.html"><span class="archive-date-label">May 11, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-05-10.html"><span class="archive-date-label">May 10, 2026</span><span class="archive-date-count">4</span></a>
+        <a href="2026-05-09.html"><span class="archive-date-label">May 09, 2026</span><span class="archive-date-count">13</span></a>
+        <a href="2026-05-08.html" class="archive-active"><span class="archive-date-label">May 08, 2026</span><span class="archive-date-count">6</span></a>
         <a href="2026-05-07.html"><span class="archive-date-label">May 07, 2026</span><span class="archive-date-count">10</span></a>
         <a href="2026-05-06.html"><span class="archive-date-label">May 06, 2026</span><span class="archive-date-count">10</span></a>
         <a href="2026-05-05.html"><span class="archive-date-label">May 05, 2026</span><span class="archive-date-count">10</span></a>
@@ -649,44 +657,8 @@
     </footer>
     <script>
         (function () {
-            var aside = document.getElementById('archive-sidebar');
-            var currentDate = aside ? (aside.getAttribute('data-current-date') || '') : '';
-            var monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
-            function applyMobileCollapse() {
-                var nav = document.getElementById('archiveNav');
-                if (nav && window.innerWidth < 900) nav.removeAttribute('open');
-            }
-
-            function render(manifest) {
-                if (!aside || !manifest || !manifest.length) return;
-                var mostRecent = manifest[0].date;
-                var items = manifest.map(function (entry) {
-                    var d = entry.date || '';
-                    var parts = d.split('-');
-                    var label = (parts.length === 3)
-                        ? monthNames[parseInt(parts[1], 10) - 1] + ' ' + parts[2] + ', ' + parts[0]
-                        : d;
-                    var href = (d === mostRecent) ? 'index.html' : (entry.url || (d + '.html'));
-                    var active = (d === currentDate) ? ' class="archive-active"' : '';
-                    var count = entry.product_count != null ? entry.product_count : 0;
-                    return '<a href="' + href + '"' + active + '>'
-                        + '<span class="archive-date-label">' + label + '</span>'
-                        + '<span class="archive-date-count">' + count + '</span>'
-                        + '</a>';
-                }).join('\n');
-                aside.innerHTML =
-                    '<details class="archive-nav" id="archiveNav" open>'
-                    + '<summary class="archive-nav-summary">Past 30 Days</summary>'
-                    + '<div class="archive-nav-list">' + items + '</div>'
-                    + '</details>';
-            }
-
-            fetch('archive.json', { cache: 'no-cache' })
-                .then(function (r) { return r.ok ? r.json() : null; })
-                .then(function (m) { if (m) render(m); })
-                .catch(function () { /* keep baked-in fallback */ })
-                .then(applyMobileCollapse);
+            var nav = document.getElementById('archiveNav');
+            if (nav && window.innerWidth < 900) nav.removeAttribute('open');
         })();
     </script>
 </body>
