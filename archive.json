@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-06-26",
+    "url": "2026-06-26.html",
+    "product_count": 21
+  },
+  {
     "date": "2026-06-25",
     "url": "2026-06-25.html",
     "product_count": 20
@@ -147,11 +152,6 @@
   {
     "date": "2026-05-27",
     "url": "2026-05-27.html",
-    "product_count": 20
-  },
-  {
-    "date": "2026-05-26",
-    "url": "2026-05-26.html",
     "product_count": 20
   }
 ]

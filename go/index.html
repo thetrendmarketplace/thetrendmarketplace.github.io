@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Locating product…</title>
+<style>
+  html,body{height:100%;margin:0}
+  body{display:flex;align-items:center;justify-content:center;
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:#444;background:#fafafa}
+  .msg{font-size:1rem;opacity:.85}
+</style>
+</head>
+<body>
+<main class="msg">Locating product…</main>
+<script>
+(function(){
+  var id = new URLSearchParams(window.location.search).get('id');
+  if(!id){ window.location.replace('/'); return; }
+  var links = fetch('/links.json').then(function(r){ return r.json(); });
+  var geo = fetch('https://ipapi.co/json/')
+              .then(function(r){ return r.json(); })
+              .catch(function(){ return null; });
+  Promise.all([links, geo]).then(function(res){
+    var data = res[0] || {};
+    var g = res[1];
+    var entry = data[id];
+    if(!entry){ window.location.replace('/'); return; }
+    var useCA;
+    if(g && g.country_code === 'CA'){
+      useCA = true;
+    } else if(!g){
+      useCA = (navigator.language || '').toLowerCase().indexOf('-ca') !== -1;
+    } else {
+      useCA = false;
+    }
+    var dest = useCA ? entry.amazon_url_ca : entry.amazon_url_us;
+    if(!dest){ dest = entry.amazon_url_us || entry.amazon_url_ca; }
+    window.location.replace(dest || '/');
+  }).catch(function(){ window.location.replace('/'); });
+})();
+</script>
+</body>
+</html>
