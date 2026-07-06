@@ -17,6 +17,7 @@
 <main class="msg">Locating product…</main>
 <script>
 (function(){
+  var LOG_URL = 'https://ttm-clicks.trendmarketplace.workers.dev';
   var id = new URLSearchParams(window.location.search).get('id');
   if(!id){ window.location.replace('/'); return; }
   var links = fetch('/links.json').then(function(r){ return r.json(); });
@@ -38,6 +39,8 @@
     }
     var dest = useCA ? entry.amazon_url_ca : entry.amazon_url_us;
     if(!dest){ dest = entry.amazon_url_us || entry.amazon_url_ca; }
+    try { if (LOG_URL && !navigator.webdriver) navigator.sendBeacon(LOG_URL + '/c',
+          JSON.stringify({id: id, cc: (g && g.country_code) || ''})); } catch(e){}
     window.location.replace(dest || '/');
   }).catch(function(){ window.location.replace('/'); });
 })();
