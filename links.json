@@ -123,7 +123,7 @@
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+korean+skin+care+products&tag=thetrendmar00-20",
     "amazon_url_us": "https://www.amazon.com/s?k=best+korean+skin+care+products&tag=thetrendmar0c-20",
     "title": "best korean skin care products",
-    "updated": "2026-07-04"
+    "updated": "2026-07-08"
   },
   "best-skin-care-products-for-aging-skin": {
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+skin+care+products+for+aging+skin&tag=thetrendmar00-20",
@@ -131,17 +131,29 @@
     "title": "best skin care products for aging skin",
     "updated": "2026-07-04"
   },
+  "best-skin-care-products-in-canada": {
+    "amazon_url_ca": "https://www.amazon.ca/s?k=best+skin+care+products+in+canada&tag=thetrendmar00-20",
+    "amazon_url_us": "https://www.amazon.com/s?k=best+skin+care+products+in+canada&tag=thetrendmar0c-20",
+    "title": "best skin care products in canada",
+    "updated": "2026-07-08"
+  },
   "best-skin-care-routine": {
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+skin+care+routine&tag=thetrendmar00-20",
     "amazon_url_us": "https://www.amazon.com/s?k=best+skin+care+routine&tag=thetrendmar0c-20",
     "title": "best skin care routine",
-    "updated": "2026-07-04"
+    "updated": "2026-07-08"
   },
   "best-supplement-for-gut-health": {
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+supplement+for+gut+health&tag=thetrendmar00-20",
     "amazon_url_us": "https://www.amazon.com/s?k=best+supplement+for+gut+health&tag=thetrendmar0c-20",
     "title": "best supplement for gut health",
     "updated": "2026-06-26"
+  },
+  "best-supplement-for-weight-loss": {
+    "amazon_url_ca": "https://www.amazon.ca/s?k=best+supplement+for+weight+loss&tag=thetrendmar00-20",
+    "amazon_url_us": "https://www.amazon.com/s?k=best+supplement+for+weight+loss&tag=thetrendmar0c-20",
+    "title": "best supplement for weight loss",
+    "updated": "2026-07-08"
   },
   "best-supplements": {
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+supplements&tag=thetrendmar00-20",
@@ -347,6 +359,12 @@
     "title": "JBL Vibe Beam 2 - True Wireless Noise Cancelling Earbuds - Black",
     "updated": "2026-07-06"
   },
+  "korean-skin-care": {
+    "amazon_url_ca": "https://www.amazon.ca/s?k=korean+skin+care&tag=thetrendmar00-20",
+    "amazon_url_us": "https://www.amazon.com/s?k=korean+skin+care&tag=thetrendmar0c-20",
+    "title": "korean skin care",
+    "updated": "2026-07-08"
+  },
   "la-roche-posay-anthelios-ultra-fluid-face-body-sunscreen-spf-50-high-uva-uvb-pro": {
     "amazon_url_ca": "https://www.amazon.ca/dp/B08BMV5VDL?tag=thetrendmar00-20",
     "amazon_url_us": "https://www.amazon.com/dp/B08BMV5VDL?tag=thetrendmar0c-20",
@@ -484,6 +502,12 @@
     "amazon_url_us": "https://www.amazon.com/dp/B0BMF7PJ4X?tag=thetrendmar0c-20",
     "title": "One Beat Flat Plug Power Bar with USB C, 6FT Ultra-Thin Extension Cord, 3 Outlet with 4 USB Ports (2 USB C) Desktop Charging Station, No Surge Protection for Cruise Ship, Travel Essentials, Dorm Room",
     "updated": "2026-07-02"
+  },
+  "owala-freesip-insulated-stainless-steel-water-bottle-with-straw-for-sports-and-t": {
+    "amazon_url_ca": "https://www.amazon.ca/dp/B085DTZQNZ?tag=thetrendmar00-20",
+    "amazon_url_us": "https://www.amazon.com/dp/B085DTZQNZ?tag=thetrendmar0c-20",
+    "title": "Owala FreeSip Insulated Stainless Steel Water Bottle with Straw for Sports and Travel, BPA-Free, 24-oz, Very, Very Dark",
+    "updated": "2026-07-08"
   },
   "owala-freesip-stainless-steel-24-oz-red-black-cherry": {
     "amazon_url_ca": "https://www.amazon.ca/dp/B0FJN3BTPV?tag=thetrendmar00-20",
@@ -658,6 +682,12 @@
     "amazon_url_us": "https://www.amazon.com/dp/B01E02DU0U?tag=thetrendmar0c-20",
     "title": "Utopia Bedding Waterproof Mattress Protector Queen Size, Bamboo Viscose Mattress Cover 200 GSM, Fits 17 Inches Deep, Breathable, Fitted Style with Stretchable Pockets",
     "updated": "2026-06-29"
+  },
+  "wireless-earbuds-50h-bluetooth-5-4-headphones-sport-bluetooth-earbuds-with-enc-n": {
+    "amazon_url_ca": "https://www.amazon.ca/dp/B0D5VJLJGS?tag=thetrendmar00-20",
+    "amazon_url_us": "https://www.amazon.com/dp/B0D5VJLJGS?tag=thetrendmar0c-20",
+    "title": "Wireless Earbuds, 50H Bluetooth 5.4 Headphones Sport, Bluetooth Earbuds with ENC Noise Canceling, HiFi Stereo Sound Wireless Earphones with Earhooks, IP7 Waterproof Ear Buds for Sports/Workout/Running",
+    "updated": "2026-07-08"
   },
   "wolfbox-megaflow-50-compressed-air-duster-110000rpm-super-power-cordless-air-dus": {
     "amazon_url_ca": "https://www.amazon.ca/dp/B0DSW7R4VN?tag=thetrendmar00-20",
