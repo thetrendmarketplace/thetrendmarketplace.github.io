@@ -201,7 +201,7 @@
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+skin+care+routine&tag=thetrendmar00-20",
     "amazon_url_us": "https://www.amazon.com/s?k=best+skin+care+routine&tag=thetrendmar0c-20",
     "title": "best skin care routine",
-    "updated": "2026-07-26"
+    "updated": "2026-08-02"
   },
   "best-skin-care-tools": {
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+skin+care+tools&tag=thetrendmar00-20",
@@ -209,11 +209,23 @@
     "title": "best skin care tools",
     "updated": "2026-07-26"
   },
+  "best-supplement-for-dry-skin": {
+    "amazon_url_ca": "https://www.amazon.ca/s?k=best+supplement+for+dry+skin&tag=thetrendmar00-20",
+    "amazon_url_us": "https://www.amazon.com/s?k=best+supplement+for+dry+skin&tag=thetrendmar0c-20",
+    "title": "best supplement for dry skin",
+    "updated": "2026-08-02"
+  },
   "best-supplement-for-gut-health": {
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+supplement+for+gut+health&tag=thetrendmar00-20",
     "amazon_url_us": "https://www.amazon.com/s?k=best+supplement+for+gut+health&tag=thetrendmar0c-20",
     "title": "best supplement for gut health",
     "updated": "2026-06-26"
+  },
+  "best-supplement-for-insulin-resistance": {
+    "amazon_url_ca": "https://www.amazon.ca/s?k=best+supplement+for+insulin+resistance&tag=thetrendmar00-20",
+    "amazon_url_us": "https://www.amazon.com/s?k=best+supplement+for+insulin+resistance&tag=thetrendmar0c-20",
+    "title": "best supplement for insulin resistance",
+    "updated": "2026-08-02"
   },
   "best-supplement-for-liver-health": {
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+supplement+for+liver+health&tag=thetrendmar00-20",
@@ -231,7 +243,7 @@
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+supplements&tag=thetrendmar00-20",
     "amazon_url_us": "https://www.amazon.com/s?k=best+supplements&tag=thetrendmar0c-20",
     "title": "best supplements",
-    "updated": "2026-07-20"
+    "updated": "2026-08-02"
   },
   "best-supplements-for-weight-loss": {
     "amazon_url_ca": "https://www.amazon.ca/s?k=best+supplements+for+weight+loss&tag=thetrendmar00-20",
