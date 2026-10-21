@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Archive: the trending Amazon products we tracked on October 21, 2026, including T-FAL. Updated daily.">
+    <meta property="og:title" content="Trending Amazon Products — October 21, 2026 | The Trend Marketplace">
+    <meta property="og:description" content="Archive: the trending Amazon products we tracked on October 21, 2026, including T-FAL. Updated daily.">
+    <link rel="canonical" href="https://thetrendmarketplace.com/2026-10-21.html">
+    <meta name="robots" content="noindex,follow">
+    <title>Trending Amazon Products — October 21, 2026 | The Trend Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      /* ===== Design tokens — clean modern ===== */
+      :root{
+        --bg:#f6f7f9; --surface:#ffffff; --ink:#0b1220; --muted:#5b6573;
+        --line:#e7eaee; --accent:#4f46e5; --accent-ink:#ffffff;
+        --ca:#d8232a; --us:#1f48b3; --heat:#ef6c2e;
+        --radius:18px; --radius-sm:12px; --shadow:0 1px 2px rgba(11,18,32,.04),0 8px 24px rgba(11,18,32,.06);
+        --shadow-hover:0 2px 4px rgba(11,18,32,.06),0 16px 40px rgba(11,18,32,.10);
+        --maxw:1180px;
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        margin:0; background:var(--bg); color:var(--ink);
+        font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing:antialiased; line-height:1.5;
+      }
+      a{color:inherit;text-decoration:none}
+      .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+      /* ===== Sticky header ===== */
+      header.site{position:sticky;top:0;z-index:40;background:rgba(246,247,249,.82);
+        backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+      .site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+      .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:1.05rem}
+      .logo .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(79,70,229,.15)}
+      .nav-flags{font-size:.82rem;color:var(--muted);font-weight:600}
+
+      /* ===== Hero ===== */
+      .hero{padding:54px 0 26px;text-align:center}
+      .eyebrow{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--accent);background:rgba(79,70,229,.08);
+        padding:6px 12px;border-radius:999px;margin-bottom:18px}
+      .hero h1{font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.05;letter-spacing:-.03em;
+        font-weight:800;margin:0 0 14px}
+      .hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:1.05rem}
+      .update-label{margin-top:16px;font-size:.85rem;color:var(--muted);font-weight:600}
+      .archive-badge{display:inline-block;margin-top:16px;font-size:.78rem;font-weight:700;
+        letter-spacing:.04em;color:var(--muted);background:#eef1f5;border:1px solid var(--line);
+        padding:6px 14px;border-radius:999px}
+
+      /* ===== Stats bar ===== */
+      .stats-bar{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:30px 0 8px}
+      .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);
+        padding:16px 26px;text-align:center;min-width:140px;box-shadow:var(--shadow)}
+      .stat-num{font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+      .stat-label{font-size:.78rem;color:var(--muted);font-weight:600;margin-top:2px}
+
+      /* ===== Layout w/ sidebar (grid only when a sidebar is injected) ===== */
+      .page-layout{padding:30px 0 60px}
+      .section-label{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+        color:var(--muted);margin:0 0 18px}
+
+      /* ===== Product grid ===== */
+      .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:20px}
+      .product-card{position:relative;background:var(--surface);border:1px solid var(--line);
+        border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+        display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+      .product-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+      .card-rank{position:absolute;top:12px;left:12px;z-index:2;background:var(--ink);color:#fff;
+        font-weight:700;font-size:.8rem;padding:4px 10px;border-radius:999px}
+      .card-image{aspect-ratio:1/1;background:#eef1f5;display:flex;align-items:center;justify-content:center;overflow:hidden}
+      .card-image img{width:100%;height:100%;object-fit:cover}
+      .card-image-fallback{font-size:3rem}
+      .card-body{padding:16px 16px 6px;flex:1}
+      .card-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+      .card-category{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+        color:var(--muted);background:#f1f3f6;padding:4px 9px;border-radius:6px}
+      .card-heat{font-size:.7rem;font-weight:700;color:var(--heat);background:rgba(239,108,46,.1);
+        padding:4px 9px;border-radius:6px}
+      .card-heat.hot{color:#fff;background:var(--heat)}
+      .card-title{font-size:1rem;font-weight:700;line-height:1.3;letter-spacing:-.01em;margin:0 0 12px}
+      .card-sources{display:flex;flex-wrap:wrap;gap:6px}
+      .source-tag{font-size:.68rem;color:var(--muted);border:1px solid var(--line);
+        padding:3px 8px;border-radius:6px}
+      .card-actions{padding:12px 16px 16px;display:flex;flex-direction:column;gap:8px}
+      .shop-btn{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;
+        font-size:.9rem;padding:11px 14px;border-radius:10px;transition:filter .15s ease,transform .1s ease}
+      .shop-btn:hover{filter:brightness(.96)}
+      .shop-btn:active{transform:scale(.985)}
+      .shop-btn-ca{background:var(--ca);color:#fff}
+      .shop-btn-us{background:transparent;color:var(--us);border:1.5px solid var(--us)}
+      .btn-arrow{transition:transform .15s ease}
+      .shop-btn:hover .btn-arrow{transform:translateX(3px)}
+
+      /* ===== Archive sidebar — styles target archive.py's class names (markup contract) ===== */
+      .archive-sidebar{margin-top:30px}
+      .archive-nav{background:var(--surface);border:1px solid var(--line);
+        border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+      .archive-nav-summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:700;
+        font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+        display:flex;align-items:center;justify-content:space-between;user-select:none}
+      .archive-nav-summary::-webkit-details-marker{display:none}
+      .archive-nav-summary::after{content:"›";transform:rotate(90deg);color:var(--muted);transition:transform .2s}
+      .archive-nav[open] .archive-nav-summary::after{transform:rotate(-90deg)}
+      .archive-nav-list{padding:6px 10px 12px;max-height:62vh;overflow-y:auto}
+      .archive-nav-list a{display:flex;align-items:center;justify-content:space-between;gap:8px;
+        padding:9px 12px;border-radius:8px;font-size:.86rem;color:var(--muted);font-weight:500}
+      .archive-nav-list a:hover{background:#f1f3f6;color:var(--ink)}
+      .archive-nav-list a.archive-active{color:var(--accent);font-weight:700;background:rgba(79,70,229,.07)}
+      .archive-date-label{font-size:.86rem}
+      .archive-date-count{font-size:.72rem;color:var(--muted);background:#f1f3f6;
+        padding:2px 8px;border-radius:999px;flex-shrink:0}
+      .archive-nav-list a.archive-active .archive-date-count{background:rgba(79,70,229,.12);color:var(--accent)}
+
+      /* ===== Footer ===== */
+      footer.site{border-top:1px solid var(--line);background:var(--surface);padding:38px 0}
+      .social-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+      .social-link{font-size:.85rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+        padding:8px 16px;border-radius:999px}
+      .social-link:hover{color:var(--ink);border-color:var(--ink)}
+      .brand-name{text-align:center;font-weight:800;letter-spacing:-.02em;margin:0 0 6px}
+      .footer-note{text-align:center;color:var(--muted);font-size:.78rem;max-width:680px;margin:0 auto;line-height:1.6}
+      .footer-note a{color:var(--accent);font-weight:600}
+      .disclosure{text-align:center;color:var(--muted);font-size:.74rem;margin-top:14px;
+        max-width:680px;margin-left:auto;margin-right:auto;line-height:1.6}
+
+      /* ===== Responsive ===== */
+      @media (min-width:900px){
+        .page-layout.has-sidebar{display:grid;grid-template-columns:1fr 260px;gap:34px;align-items:start}
+        .has-sidebar .archive-sidebar{margin-top:0;position:sticky;top:84px}
+      }
+      @media (max-width:899px){
+        .products-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+      }
+    </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="dot"></span> The Trend Marketplace</a>
+    <span class="nav-flags">🇨🇦 Canada · 🇺🇸 United States</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow">Updated Daily · Curated by AI</span>
+    <h1>Today's hottest products on Amazon</h1>
+    <p>A fresh, hand-curated drop of trending products every single day — with one tap to shop in 🇨🇦 Canada or 🇺🇸 the United States.</p>
+    <p class="archive-badge">Archive — October 21, 2026</p>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stat"><div class="stat-num">20</div><div class="stat-label">Products Today</div></div>
+    <div class="stat"><div class="stat-num">🇨🇦 🇺🇸</div><div class="stat-label">Amazon CA &amp; US</div></div>
+    <div class="stat"><div class="stat-num">Daily</div><div class="stat-label">Auto-Updated</div></div>
+  </section>
+
+  <div class="page-layout has-sidebar">
+    <div>
+      <div class="section-label">Today's Trending Products</div>
+      <div class="products-grid">
+        
+        <article class="product-card" id="p-t-fal-signature-non-stick-non-toxic-pots-and-pan-set-24cm-10-in-30cm-12-in-stone">
+            <div class="card-rank">#1</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/34146459/pexels-photo-34146459.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="T-FAL, Signature, Non Stick Non Toxic Pots and Pan Set, 24cm (10 in)/ 30cm (12 in), Stone Effect Cookware Set, Thermo Spot Heat Indicator, Metal Utensil Safe,Black, Oven-Safe up to 175˚C/350˚F"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Kitchen</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">T-FAL, Signature, Non Stick Non Toxic Pots and Pan Set, 24cm (10 in)/ 30cm (12 in), Stone Effect Cookware Set, Thermo Spot Heat Indicator, Metal Utensil Safe,Black, Oven-Safe up to 175˚C/350˚F</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B07YX7DJTC?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B07YX7DJTC?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-etekcity-food-kitchen-scale-digital-grams-and-ounces-11lb-tare-function-ideal-fo">
+            <div class="card-rank">#2</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/8175357/pexels-photo-8175357.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Etekcity Food Kitchen Scale, Digital Grams and Ounces, 11lb | Tare Function, Ideal for Baking, Weight Loss, Keto, Meal Prep, Packages, Liquids and Jewelry, 304 Stainless Steel"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Electronics</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Etekcity Food Kitchen Scale, Digital Grams and Ounces, 11lb | Tare Function, Ideal for Baking, Weight Loss, Keto, Meal Prep, Packages, Liquids and Jewelry, 304 Stainless Steel</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0113UZJE2?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0113UZJE2?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-mizuno-480121-9090-10-one-t10-plus-volleyball-kneepad">
+            <div class="card-rank">#3</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/6203674/pexels-photo-6203674.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Mizuno 480121.9090.10.ONE T10 Plus Volleyball Kneepad"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Mizuno 480121.9090.10.ONE T10 Plus Volleyball Kneepad</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B00OP86QSS?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B00OP86QSS?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-warmspark-hand-warmers-long-lasting-pocket-heat-pack-camping-gloves-warmers-up-t">
+            <div class="card-rank">#4</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/10209148/pexels-photo-10209148.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="WarmSpark Hand Warmers - Long Lasting Pocket Heat Pack Camping Gloves Warmers - Up to 12 Hours of Heat"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">WarmSpark Hand Warmers - Long Lasting Pocket Heat Pack Camping Gloves Warmers - Up to 12 Hours of Heat</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0CKT1NJ7L?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0CKT1NJ7L?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-lexar-d40e-128gb-dual-usb-3-2-gen-1-type-c-jump-drive-champagne-silver-usb-c-fla">
+            <div class="card-rank">#5</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/10336136/pexels-photo-10336136.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Lexar D40E 128GB Dual USB 3.2 Gen 1 Type-C Jump Drive, Champagne Silver | USB-C Flash, Metal Housing, Swivel Design, Thumb Drive"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Electronics</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Lexar D40E 128GB Dual USB 3.2 Gen 1 Type-C Jump Drive, Champagne Silver | USB-C Flash, Metal Housing, Swivel Design, Thumb Drive</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0DH1MKVQV?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0DH1MKVQV?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-anker-soundcore-p20i-true-wireless-earbuds-30h-playtime-bluetooth-5-3-ipx5-water">
+            <div class="card-rank">#6</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/7129186/pexels-photo-7129186.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Anker soundcore P20i True Wireless Earbuds, 30H Playtime, Bluetooth 5.3 | IPX5 Water-Resistant, 10 mm Drivers with Rich Bass, Clear Calls with 2 Mics and AI, 22 Preset EQs, for Work and Gym (Black)"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Electronics</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Anker soundcore P20i True Wireless Earbuds, 30H Playtime, Bluetooth 5.3 | IPX5 Water-Resistant, 10 mm Drivers with Rich Bass, Clear Calls with 2 Mics and AI, 22 Preset EQs, for Work and Gym (Black)</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0BTYCRJSS?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0BTYCRJSS?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-jbl-go-4-portable-bluetooth-speaker-black-waterproof-and-dustproof-7-hour-built-">
+            <div class="card-rank">#7</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/18589085/pexels-photo-18589085.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="JBL Go 4 - Portable Bluetooth Speaker - Black | Waterproof and Dustproof, 7-Hour Built-in Battery, Made in Part with Recycled Materials"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Electronics</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">JBL Go 4 - Portable Bluetooth Speaker - Black | Waterproof and Dustproof, 7-Hour Built-in Battery, Made in Part with Recycled Materials</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0CTNWBT1Z?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0CTNWBT1Z?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-lepro-rechargeable-headlamp-2-pack-2000-lux-super-bright-led-head-torch-with-red">
+            <div class="card-rank">#8</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/6831224/pexels-photo-6831224.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Lepro Rechargeable Headlamp 2-Pack, 2000 Lux Super Bright LED Head Torch with Red Light, 6 Modes USB Charging Waterproof Headlight, Lightweight Hard Hat Compatible Light for Camping, Hiking, Running"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Lepro Rechargeable Headlamp 2-Pack, 2000 Lux Super Bright LED Head Torch with Red Light, 6 Modes USB Charging Waterproof Headlight, Lightweight Hard Hat Compatible Light for Camping, Hiking, Running</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B07Y21GMKQ?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B07Y21GMKQ?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-homvana-humidifier-for-bedroom-large-room-oil-diffuser-3-6l-grey-23db-quiet-360-">
+            <div class="card-rank">#9</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/6941312/pexels-photo-6941312.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Homvana Humidifier for Bedroom, Large Room, Oil Diffuser (3.6L, Grey) | 23dB Quiet, 360° Rotatable, 36H Runtime, BPA Free, Top Fill, Easy Clean, 7 Color Night Light, Oil Diffuser for Aromatherapy"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Kitchen</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Homvana Humidifier for Bedroom, Large Room, Oil Diffuser (3.6L, Grey) | 23dB Quiet, 360° Rotatable, 36H Runtime, BPA Free, Top Fill, Easy Clean, 7 Color Night Light, Oil Diffuser for Aromatherapy</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0BB3TPQ91?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0BB3TPQ91?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-cerave-moisturizing-cream-for-dry-very-dry-skin-on-the-face-body-539g-rich-hydra">
+            <div class="card-rank">#10</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/14107358/pexels-photo-14107358.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="CeraVe Moisturizing Cream for Dry-Very Dry Skin on the Face & Body, 539g | Rich & Hydrating, Safe for Sensitive Skin, Non-Greasy & Fast-Absorbing, with Hyaluronic Acid & Ceramides, Fragrance-Free"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">CeraVe Moisturizing Cream for Dry-Very Dry Skin on the Face & Body, 539g | Rich & Hydrating, Safe for Sensitive Skin, Non-Greasy & Fast-Absorbing, with Hyaluronic Acid & Ceramides, Fragrance-Free</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B083GGFTPW?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B083GGFTPW?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-fancy-feast-grilled-wet-cat-food-in-gravy-variety-pack-3-flavours-85-g-can-24-pa">
+            <div class="card-rank">#11</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/36782583/pexels-photo-36782583.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Fancy Feast Grilled Wet Cat Food, in Gravy Variety Pack 3 Flavours - 85 g Can (24 Pack)"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Pet Supplies</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Fancy Feast Grilled Wet Cat Food, in Gravy Variety Pack 3 Flavours - 85 g Can (24 Pack)</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B079NTXQN1?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B079NTXQN1?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-upsimples-11x14-picture-frame-black-1-pack-mutiple-size-options-lightweight-wall">
+            <div class="card-rank">#12</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/383568/pexels-photo-383568.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="upsimples 11x14 Picture Frame,Black,1 Pack | Mutiple Size Options,Lightweight,Wall or Tabletop,Great for Birthdays,Holidays,Thanksgiving,Christmas,Graduation"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Kitchen</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">upsimples 11x14 Picture Frame,Black,1 Pack | Mutiple Size Options,Lightweight,Wall or Tabletop,Great for Birthdays,Holidays,Thanksgiving,Christmas,Graduation</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0BQR2BQYZ?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0BQR2BQYZ?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-the-ordinary-azelaic-acid-suspension-10-brightening-formula-for-uneven-and-blemi">
+            <div class="card-rank">#13</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/14920153/pexels-photo-14920153.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="The Ordinary Azelaic Acid Suspension 10%, Brightening Formula for Uneven and Blemish-Prone Skin, 30 ml"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">The Ordinary Azelaic Acid Suspension 10%, Brightening Formula for Uneven and Blemish-Prone Skin, 30 ml</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B06WD5J8KY?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B06WD5J8KY?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-bedsure-satin-pillow-cases-queen-similar-to-silk-pillowcase-2-pack-grey-silky-pi">
+            <div class="card-rank">#14</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/3755585/pexels-photo-3755585.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Bedsure Satin Pillow Cases Queen - Similar to Silk Pillowcase 2 Pack Grey | Silky Pillow Cases, Decorative Covers, Room Decor, Gifts for Women Men, Envelope Closure, For Hair Skin, 20" x 30""></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Kitchen</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Bedsure Satin Pillow Cases Queen - Similar to Silk Pillowcase 2 Pack Grey | Silky Pillow Cases, Decorative Covers, Room Decor, Gifts for Women Men, Envelope Closure, For Hair Skin, 20" x 30"</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B07HL5K4RM?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B07HL5K4RM?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-gritin-resistance-bands-set-of-5-skin-friendly-resistance-exercise-band-5-differ">
+            <div class="card-rank">#15</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/4148956/pexels-photo-4148956.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Gritin Resistance Bands, Set of 5 Skin-Friendly Resistance Exercise Band | 5 Different Strength Levels Fitness Bands - Travel Carrying Case Included - Ideal for Home, Gym, Yoga, Training"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Gritin Resistance Bands, Set of 5 Skin-Friendly Resistance Exercise Band | 5 Different Strength Levels Fitness Bands - Travel Carrying Case Included - Ideal for Home, Gym, Yoga, Training</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B07L9WLKZQ?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B07L9WLKZQ?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-tidy-cats-free-clean-cat-litter-lightweight-unscented-multi-cat-5-44-kg-box">
+            <div class="card-rank">#16</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/8408551/pexels-photo-8408551.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Tidy Cats Free & Clean Cat Litter, LightWeight Unscented Multi-Cat - 5.44 kg Box"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Pet Supplies</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Tidy Cats Free & Clean Cat Litter, LightWeight Unscented Multi-Cat - 5.44 kg Box</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B07WYHVT3C?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B07WYHVT3C?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-panoxyl-acne-wash-4-benzoyl-peroxide-for-face-body-85g-daily-antibacterial-wash-">
+            <div class="card-rank">#17</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/4812731/pexels-photo-4812731.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="PanOxyl Acne Wash, 4% Benzoyl Peroxide, For Face & Body, 85g | Daily Antibacterial Wash, Helps Clear & Prevent Acne, Helps Clear Pores, Dermatologist Tested, Gentle, pH-Balanced, Vegan"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">PanOxyl Acne Wash, 4% Benzoyl Peroxide, For Face & Body, 85g | Daily Antibacterial Wash, Helps Clear & Prevent Acne, Helps Clear Pores, Dermatologist Tested, Gentle, pH-Balanced, Vegan</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B09NYTQ2KM?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B09NYTQ2KM?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-yes4all-neoprene-coated-dumbbell-hand-weight-sets-of-2-multiple-weight-options-w">
+            <div class="card-rank">#18</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/4793257/pexels-photo-4793257.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Yes4All Neoprene Coated Dumbbell Hand Weight Sets of 2 - Multiple Weight Options with 15 Colors, Hexagon Shape, Anti-roll, Anti-Slip"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Yes4All Neoprene Coated Dumbbell Hand Weight Sets of 2 - Multiple Weight Options with 15 Colors, Hexagon Shape, Anti-roll, Anti-Slip</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B00A6MKU6G?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B00A6MKU6G?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-purina-pro-plan-veterinary-supplements-fortiflora-powdered-dog-probiotics-30-g-s">
+            <div class="card-rank">#19</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/18764141/pexels-photo-18764141.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Purina Pro Plan Veterinary Supplements Fortiflora Powdered Dog Probiotics - 30 g sachets (Pack of 30)"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Pet Supplies</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Purina Pro Plan Veterinary Supplements Fortiflora Powdered Dog Probiotics - 30 g sachets (Pack of 30)</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B09BDDNCFH?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B09BDDNCFH?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-cap-barbell-coated-hex-dumbbell-weight-pairs-multiple-options">
+            <div class="card-rank">#20</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/16513604/pexels-photo-16513604.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="CAP Barbell Coated Hex Dumbbell Weight - Pairs | Multiple Options"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">CAP Barbell Coated Hex Dumbbell Weight - Pairs | Multiple Options</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0D6HZF6S2?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0D6HZF6S2?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+      </div>
+    </div>
+    <aside class="archive-sidebar" id="archive-sidebar" data-current-date="2026-10-21">
+    <details class="archive-nav" id="archiveNav" open>
+      <summary class="archive-nav-summary">Past 30 Days</summary>
+      <div class="archive-nav-list">
+        <a href="index.html" class="archive-active"><span class="archive-date-label">Oct 21, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-20.html"><span class="archive-date-label">Oct 20, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-19.html"><span class="archive-date-label">Oct 19, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-18.html"><span class="archive-date-label">Oct 18, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-17.html"><span class="archive-date-label">Oct 17, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-16.html"><span class="archive-date-label">Oct 16, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-15.html"><span class="archive-date-label">Oct 15, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-14.html"><span class="archive-date-label">Oct 14, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-13.html"><span class="archive-date-label">Oct 13, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-12.html"><span class="archive-date-label">Oct 12, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-11.html"><span class="archive-date-label">Oct 11, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-10.html"><span class="archive-date-label">Oct 10, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-09.html"><span class="archive-date-label">Oct 09, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-08.html"><span class="archive-date-label">Oct 08, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-07.html"><span class="archive-date-label">Oct 07, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-06.html"><span class="archive-date-label">Oct 06, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-05.html"><span class="archive-date-label">Oct 05, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-04.html"><span class="archive-date-label">Oct 04, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-03.html"><span class="archive-date-label">Oct 03, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-02.html"><span class="archive-date-label">Oct 02, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-01.html"><span class="archive-date-label">Oct 01, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-30.html"><span class="archive-date-label">Sep 30, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-29.html"><span class="archive-date-label">Sep 29, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-28.html"><span class="archive-date-label">Sep 28, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-27.html"><span class="archive-date-label">Sep 27, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-26.html"><span class="archive-date-label">Sep 26, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-25.html"><span class="archive-date-label">Sep 25, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-24.html"><span class="archive-date-label">Sep 24, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-23.html"><span class="archive-date-label">Sep 23, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-22.html"><span class="archive-date-label">Sep 22, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-21.html"><span class="archive-date-label">Sep 21, 2026</span><span class="archive-date-count">20</span></a>
+      </div>
+    </details>
+  </aside>
+  </div>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Trending Products — October 21, 2026", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "T-FAL, Signature, Non Stick Non Toxic Pots and Pan Set, 24cm (10 in)/ 30cm (12 in), Stone Effect Cookware Set, Thermo Spot Heat Indicator, Metal Utensil Safe,Black, Oven-Safe up to 175˚C/350˚F", "url": "https://www.amazon.ca/dp/B07YX7DJTC?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/34146459/pexels-photo-34146459.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 2, "name": "Etekcity Food Kitchen Scale, Digital Grams and Ounces, 11lb | Tare Function, Ideal for Baking, Weight Loss, Keto, Meal Prep, Packages, Liquids and Jewelry, 304 Stainless Steel", "url": "https://www.amazon.ca/dp/B0113UZJE2?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/8175357/pexels-photo-8175357.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 3, "name": "Mizuno 480121.9090.10.ONE T10 Plus Volleyball Kneepad", "url": "https://www.amazon.ca/dp/B00OP86QSS?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/6203674/pexels-photo-6203674.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 4, "name": "WarmSpark Hand Warmers - Long Lasting Pocket Heat Pack Camping Gloves Warmers - Up to 12 Hours of Heat", "url": "https://www.amazon.ca/dp/B0CKT1NJ7L?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/10209148/pexels-photo-10209148.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 5, "name": "Lexar D40E 128GB Dual USB 3.2 Gen 1 Type-C Jump Drive, Champagne Silver | USB-C Flash, Metal Housing, Swivel Design, Thumb Drive", "url": "https://www.amazon.ca/dp/B0DH1MKVQV?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/10336136/pexels-photo-10336136.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 6, "name": "Anker soundcore P20i True Wireless Earbuds, 30H Playtime, Bluetooth 5.3 | IPX5 Water-Resistant, 10 mm Drivers with Rich Bass, Clear Calls with 2 Mics and AI, 22 Preset EQs, for Work and Gym (Black)", "url": "https://www.amazon.ca/dp/B0BTYCRJSS?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/7129186/pexels-photo-7129186.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 7, "name": "JBL Go 4 - Portable Bluetooth Speaker - Black | Waterproof and Dustproof, 7-Hour Built-in Battery, Made in Part with Recycled Materials", "url": "https://www.amazon.ca/dp/B0CTNWBT1Z?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/18589085/pexels-photo-18589085.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 8, "name": "Lepro Rechargeable Headlamp 2-Pack, 2000 Lux Super Bright LED Head Torch with Red Light, 6 Modes USB Charging Waterproof Headlight, Lightweight Hard Hat Compatible Light for Camping, Hiking, Running", "url": "https://www.amazon.ca/dp/B07Y21GMKQ?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/6831224/pexels-photo-6831224.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 9, "name": "Homvana Humidifier for Bedroom, Large Room, Oil Diffuser (3.6L, Grey) | 23dB Quiet, 360° Rotatable, 36H Runtime, BPA Free, Top Fill, Easy Clean, 7 Color Night Light, Oil Diffuser for Aromatherapy", "url": "https://www.amazon.ca/dp/B0BB3TPQ91?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/6941312/pexels-photo-6941312.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 10, "name": "CeraVe Moisturizing Cream for Dry-Very Dry Skin on the Face & Body, 539g | Rich & Hydrating, Safe for Sensitive Skin, Non-Greasy & Fast-Absorbing, with Hyaluronic Acid & Ceramides, Fragrance-Free", "url": "https://www.amazon.ca/dp/B083GGFTPW?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/14107358/pexels-photo-14107358.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 11, "name": "Fancy Feast Grilled Wet Cat Food, in Gravy Variety Pack 3 Flavours - 85 g Can (24 Pack)", "url": "https://www.amazon.ca/dp/B079NTXQN1?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/36782583/pexels-photo-36782583.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 12, "name": "upsimples 11x14 Picture Frame,Black,1 Pack | Mutiple Size Options,Lightweight,Wall or Tabletop,Great for Birthdays,Holidays,Thanksgiving,Christmas,Graduation", "url": "https://www.amazon.ca/dp/B0BQR2BQYZ?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/383568/pexels-photo-383568.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 13, "name": "The Ordinary Azelaic Acid Suspension 10%, Brightening Formula for Uneven and Blemish-Prone Skin, 30 ml", "url": "https://www.amazon.ca/dp/B06WD5J8KY?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/14920153/pexels-photo-14920153.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 14, "name": "Bedsure Satin Pillow Cases Queen - Similar to Silk Pillowcase 2 Pack Grey | Silky Pillow Cases, Decorative Covers, Room Decor, Gifts for Women Men, Envelope Closure, For Hair Skin, 20\" x 30\"", "url": "https://www.amazon.ca/dp/B07HL5K4RM?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/3755585/pexels-photo-3755585.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 15, "name": "Gritin Resistance Bands, Set of 5 Skin-Friendly Resistance Exercise Band | 5 Different Strength Levels Fitness Bands - Travel Carrying Case Included - Ideal for Home, Gym, Yoga, Training", "url": "https://www.amazon.ca/dp/B07L9WLKZQ?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/4148956/pexels-photo-4148956.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 16, "name": "Tidy Cats Free & Clean Cat Litter, LightWeight Unscented Multi-Cat - 5.44 kg Box", "url": "https://www.amazon.ca/dp/B07WYHVT3C?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/8408551/pexels-photo-8408551.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 17, "name": "PanOxyl Acne Wash, 4% Benzoyl Peroxide, For Face & Body, 85g | Daily Antibacterial Wash, Helps Clear & Prevent Acne, Helps Clear Pores, Dermatologist Tested, Gentle, pH-Balanced, Vegan", "url": "https://www.amazon.ca/dp/B09NYTQ2KM?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/4812731/pexels-photo-4812731.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 18, "name": "Yes4All Neoprene Coated Dumbbell Hand Weight Sets of 2 - Multiple Weight Options with 15 Colors, Hexagon Shape, Anti-roll, Anti-Slip", "url": "https://www.amazon.ca/dp/B00A6MKU6G?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/4793257/pexels-photo-4793257.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 19, "name": "Purina Pro Plan Veterinary Supplements Fortiflora Powdered Dog Probiotics - 30 g sachets (Pack of 30)", "url": "https://www.amazon.ca/dp/B09BDDNCFH?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/18764141/pexels-photo-18764141.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 20, "name": "CAP Barbell Coated Hex Dumbbell Weight - Pairs | Multiple Options", "url": "https://www.amazon.ca/dp/B0D6HZF6S2?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/16513604/pexels-photo-16513604.jpeg?auto=compress&cs=tinysrgb&h=350"}]}</script>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="social-links">
+      <a href="https://tiktok.com/@TheTrendMarketplace" class="social-link" target="_blank" rel="noopener">TikTok</a><a href="https://instagram.com/thetrendmarketplacehq" class="social-link" target="_blank" rel="noopener">Instagram</a><a href="https://youtube.com/@TheTrendMarketplace" class="social-link" target="_blank" rel="noopener">YouTube</a><a href="https://pinterest.com/thetrendmarketplacehq" class="social-link" target="_blank" rel="noopener">Pinterest</a><a href="https://facebook.com/thetrendmarketplacehq" class="social-link" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <p class="brand-name">The Trend Marketplace</p>
+    <p class="footer-note">
+      As an Amazon Associate, The Trend Marketplace earns from qualifying purchases.
+      Links are affiliate links — shopping through them supports this channel at no extra cost to you.
+      <br>
+      Photos via <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a>
+      &nbsp;·&nbsp; <a href="https://linktr.ee/thetrendmarketplace" target="_blank">All Links</a>
+    </p>
+    <p class="disclosure">
+      Links on this page are affiliate links; we may earn a commission at no extra cost to you. #ad
+    </p>
+  </div>
+</footer>
+
+<!-- Dynamic archive re-render: rebuilds the sidebar list from the JSON manifest at
+     runtime. archive.py trims this script to a mobile-collapse stub on prior dated
+     pages, so keep its shape (IIFE form, manifest fetch) intact. -->
+<script>
+  (function () {
+    var aside = document.querySelector('.archive-sidebar');
+    if (!aside) return;
+    var current = aside.getAttribute('data-current-date') || '';
+    fetch('archive.json')
+      .then(function (r) { return r.json(); })
+      .then(function (manifest) {
+        var nav = document.getElementById('archiveNav');
+        if (!nav || !Array.isArray(manifest) || !manifest.length) return;
+        var list = nav.querySelector('.archive-nav-list');
+        if (!list) return;
+        var mon = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        var recent = manifest[0].date;
+        list.innerHTML = manifest.map(function (e) {
+          var parts = (e.date || '').split('-');
+          var label = (parts.length === 3)
+            ? mon[parseInt(parts[1], 10) - 1] + ' ' + parts[2] + ', ' + parts[0]
+            : e.date;
+          var href = (e.date === recent) ? 'index.html' : (e.url || (e.date + '.html'));
+          var active = (e.date === current) ? ' class="archive-active"' : '';
+          var count = e.product_count || 0;
+          return '<a href="' + href + '"' + active + '>'
+               + '<span class="archive-date-label">' + label + '</span>'
+               + '<span class="archive-date-count">' + count + '</span></a>';
+        }).join('\n');
+        if (window.innerWidth < 900) nav.removeAttribute('open');
+      })
+      .catch(function () { /* keep baked-in fallback list */ });
+  })();
+</script>
+
+
+<script>
+(function () {
+  var LOG_URL = 'https://ttm-clicks.trendmarketplace.workers.dev';
+  if (!LOG_URL || navigator.webdriver) return;
+  document.addEventListener('click', function (ev) {
+    var t = ev.target;
+    if (!t || !t.closest) return;
+    var a = t.closest('a.shop-btn');
+    if (!a) return;
+    var card = a.closest('article[id^="p-"]');
+    if (!card) return;
+    try {
+      navigator.sendBeacon(LOG_URL + '/c', JSON.stringify({
+        id: card.id.slice(2),
+        cc: a.classList.contains('shop-btn-ca') ? 'CA' : 'US'
+      }));
+    } catch (e) { /* never block the click */ }
+  }, true);
+})();
+</script>
+</body>
+</html>
