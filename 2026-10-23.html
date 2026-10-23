@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Archive: the trending Amazon products we tracked on October 23, 2026, including Amazon Basics Neoprene Dumbbell Hand Weights. Updated daily.">
+    <meta property="og:title" content="Trending Amazon Products — October 23, 2026 | The Trend Marketplace">
+    <meta property="og:description" content="Archive: the trending Amazon products we tracked on October 23, 2026, including Amazon Basics Neoprene Dumbbell Hand Weights. Updated daily.">
+    <link rel="canonical" href="https://thetrendmarketplace.com/2026-10-23.html">
+    <meta name="robots" content="noindex,follow">
+    <title>Trending Amazon Products — October 23, 2026 | The Trend Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      /* ===== Design tokens — clean modern ===== */
+      :root{
+        --bg:#f6f7f9; --surface:#ffffff; --ink:#0b1220; --muted:#5b6573;
+        --line:#e7eaee; --accent:#4f46e5; --accent-ink:#ffffff;
+        --ca:#d8232a; --us:#1f48b3; --heat:#ef6c2e;
+        --radius:18px; --radius-sm:12px; --shadow:0 1px 2px rgba(11,18,32,.04),0 8px 24px rgba(11,18,32,.06);
+        --shadow-hover:0 2px 4px rgba(11,18,32,.06),0 16px 40px rgba(11,18,32,.10);
+        --maxw:1180px;
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        margin:0; background:var(--bg); color:var(--ink);
+        font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing:antialiased; line-height:1.5;
+      }
+      a{color:inherit;text-decoration:none}
+      .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+      /* ===== Sticky header ===== */
+      header.site{position:sticky;top:0;z-index:40;background:rgba(246,247,249,.82);
+        backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+      .site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+      .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:1.05rem}
+      .logo .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(79,70,229,.15)}
+      .nav-flags{font-size:.82rem;color:var(--muted);font-weight:600}
+
+      /* ===== Hero ===== */
+      .hero{padding:54px 0 26px;text-align:center}
+      .eyebrow{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--accent);background:rgba(79,70,229,.08);
+        padding:6px 12px;border-radius:999px;margin-bottom:18px}
+      .hero h1{font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.05;letter-spacing:-.03em;
+        font-weight:800;margin:0 0 14px}
+      .hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:1.05rem}
+      .update-label{margin-top:16px;font-size:.85rem;color:var(--muted);font-weight:600}
+      .archive-badge{display:inline-block;margin-top:16px;font-size:.78rem;font-weight:700;
+        letter-spacing:.04em;color:var(--muted);background:#eef1f5;border:1px solid var(--line);
+        padding:6px 14px;border-radius:999px}
+
+      /* ===== Stats bar ===== */
+      .stats-bar{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:30px 0 8px}
+      .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);
+        padding:16px 26px;text-align:center;min-width:140px;box-shadow:var(--shadow)}
+      .stat-num{font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+      .stat-label{font-size:.78rem;color:var(--muted);font-weight:600;margin-top:2px}
+
+      /* ===== Layout w/ sidebar (grid only when a sidebar is injected) ===== */
+      .page-layout{padding:30px 0 60px}
+      .section-label{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+        color:var(--muted);margin:0 0 18px}
+
+      /* ===== Product grid ===== */
+      .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:20px}
+      .product-card{position:relative;background:var(--surface);border:1px solid var(--line);
+        border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+        display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+      .product-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+      .card-rank{position:absolute;top:12px;left:12px;z-index:2;background:var(--ink);color:#fff;
+        font-weight:700;font-size:.8rem;padding:4px 10px;border-radius:999px}
+      .card-image{aspect-ratio:1/1;background:#eef1f5;display:flex;align-items:center;justify-content:center;overflow:hidden}
+      .card-image img{width:100%;height:100%;object-fit:cover}
+      .card-image-fallback{font-size:3rem}
+      .card-body{padding:16px 16px 6px;flex:1}
+      .card-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+      .card-category{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+        color:var(--muted);background:#f1f3f6;padding:4px 9px;border-radius:6px}
+      .card-heat{font-size:.7rem;font-weight:700;color:var(--heat);background:rgba(239,108,46,.1);
+        padding:4px 9px;border-radius:6px}
+      .card-heat.hot{color:#fff;background:var(--heat)}
+      .card-title{font-size:1rem;font-weight:700;line-height:1.3;letter-spacing:-.01em;margin:0 0 12px}
+      .card-sources{display:flex;flex-wrap:wrap;gap:6px}
+      .source-tag{font-size:.68rem;color:var(--muted);border:1px solid var(--line);
+        padding:3px 8px;border-radius:6px}
+      .card-actions{padding:12px 16px 16px;display:flex;flex-direction:column;gap:8px}
+      .shop-btn{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;
+        font-size:.9rem;padding:11px 14px;border-radius:10px;transition:filter .15s ease,transform .1s ease}
+      .shop-btn:hover{filter:brightness(.96)}
+      .shop-btn:active{transform:scale(.985)}
+      .shop-btn-ca{background:var(--ca);color:#fff}
+      .shop-btn-us{background:transparent;color:var(--us);border:1.5px solid var(--us)}
+      .btn-arrow{transition:transform .15s ease}
+      .shop-btn:hover .btn-arrow{transform:translateX(3px)}
+
+      /* ===== Archive sidebar — styles target archive.py's class names (markup contract) ===== */
+      .archive-sidebar{margin-top:30px}
+      .archive-nav{background:var(--surface);border:1px solid var(--line);
+        border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+      .archive-nav-summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:700;
+        font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+        display:flex;align-items:center;justify-content:space-between;user-select:none}
+      .archive-nav-summary::-webkit-details-marker{display:none}
+      .archive-nav-summary::after{content:"›";transform:rotate(90deg);color:var(--muted);transition:transform .2s}
+      .archive-nav[open] .archive-nav-summary::after{transform:rotate(-90deg)}
+      .archive-nav-list{padding:6px 10px 12px;max-height:62vh;overflow-y:auto}
+      .archive-nav-list a{display:flex;align-items:center;justify-content:space-between;gap:8px;
+        padding:9px 12px;border-radius:8px;font-size:.86rem;color:var(--muted);font-weight:500}
+      .archive-nav-list a:hover{background:#f1f3f6;color:var(--ink)}
+      .archive-nav-list a.archive-active{color:var(--accent);font-weight:700;background:rgba(79,70,229,.07)}
+      .archive-date-label{font-size:.86rem}
+      .archive-date-count{font-size:.72rem;color:var(--muted);background:#f1f3f6;
+        padding:2px 8px;border-radius:999px;flex-shrink:0}
+      .archive-nav-list a.archive-active .archive-date-count{background:rgba(79,70,229,.12);color:var(--accent)}
+
+      /* ===== Footer ===== */
+      footer.site{border-top:1px solid var(--line);background:var(--surface);padding:38px 0}
+      .social-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+      .social-link{font-size:.85rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+        padding:8px 16px;border-radius:999px}
+      .social-link:hover{color:var(--ink);border-color:var(--ink)}
+      .brand-name{text-align:center;font-weight:800;letter-spacing:-.02em;margin:0 0 6px}
+      .footer-note{text-align:center;color:var(--muted);font-size:.78rem;max-width:680px;margin:0 auto;line-height:1.6}
+      .footer-note a{color:var(--accent);font-weight:600}
+      .disclosure{text-align:center;color:var(--muted);font-size:.74rem;margin-top:14px;
+        max-width:680px;margin-left:auto;margin-right:auto;line-height:1.6}
+
+      /* ===== Responsive ===== */
+      @media (min-width:900px){
+        .page-layout.has-sidebar{display:grid;grid-template-columns:1fr 260px;gap:34px;align-items:start}
+        .has-sidebar .archive-sidebar{margin-top:0;position:sticky;top:84px}
+      }
+      @media (max-width:899px){
+        .products-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+      }
+    </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="dot"></span> The Trend Marketplace</a>
+    <span class="nav-flags">🇨🇦 Canada · 🇺🇸 United States</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow">Updated Daily · Curated by AI</span>
+    <h1>Today's hottest products on Amazon</h1>
+    <p>A fresh, hand-curated drop of trending products every single day — with one tap to shop in 🇨🇦 Canada or 🇺🇸 the United States.</p>
+    <p class="archive-badge">Archive — October 23, 2026</p>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stat"><div class="stat-num">20</div><div class="stat-label">Products Today</div></div>
+    <div class="stat"><div class="stat-num">🇨🇦 🇺🇸</div><div class="stat-label">Amazon CA &amp; US</div></div>
+    <div class="stat"><div class="stat-num">Daily</div><div class="stat-label">Auto-Updated</div></div>
+  </section>
+
+  <div class="page-layout has-sidebar">
+    <div>
+      <div class="section-label">Today's Trending Products</div>
+      <div class="products-grid">
+        
+        <article class="product-card" id="p-amazon-basics-neoprene-dumbbell-hand-weights">
+            <div class="card-rank">#1</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/4793257/pexels-photo-4793257.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Amazon Basics Neoprene Dumbbell Hand Weights"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Amazon Basics Neoprene Dumbbell Hand Weights</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B01LR5S6HK?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B01LR5S6HK?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-yeti-rambler-16-oz-travel-bottle-stainless-steel-vacuum-insulated-with-leakproof">
+            <div class="card-rank">#2</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/6378651/pexels-photo-6378651.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="YETI Rambler 16 oz Travel Bottle, Stainless Steel, Vacuum Insulated with Leakproof Commuter Cap, Black"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">YETI Rambler 16 oz Travel Bottle, Stainless Steel, Vacuum Insulated with Leakproof Commuter Cap, Black</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0F9ZWXM26?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0F9ZWXM26?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-gum-advanced-care-flosser-picks-infused-with-vitamin-e-fluroide-fresh-mint-flavo">
+            <div class="card-rank">#3</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/5938299/pexels-photo-5938299.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="GUM Advanced Care Flosser Picks, Infused with Vitamin E & fluroide, Fresh Mint Flavour, Blue, 150 flossers (1 Bag)"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">GUM Advanced Care Flosser Picks, Infused with Vitamin E & fluroide, Fresh Mint Flavour, Blue, 150 flossers (1 Bag)</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B074Q537B9?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B074Q537B9?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-neenca-professional-knee-brace-medical-knee-support-for-women-men-relief">
+            <div class="card-rank">#4</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/38527686/pexels-photo-38527686.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="NEENCA Professional Knee Brace, Medical Knee Support for Women & Men Relief"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">NEENCA Professional Knee Brace, Medical Knee Support for Women & Men Relief</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B07R71Z4NS?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B07R71Z4NS?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-neutrogena-all-in-one-makeup-removing-cleansing-wipes-twin-pack-50-count-gentle-">
+            <div class="card-rank">#5</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/9246298/pexels-photo-9246298.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Neutrogena All-in-One Makeup Removing Cleansing Wipes, Twin Pack, 50 Count | Gentle Makeup Remover Wipe, Removes Waterproof Mascara, Micellar, Alcohol-Free for Sensitive Eye Area, No-Rinse, Plant-based"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Neutrogena All-in-One Makeup Removing Cleansing Wipes, Twin Pack, 50 Count | Gentle Makeup Remover Wipe, Removes Waterproof Mascara, Micellar, Alcohol-Free for Sensitive Eye Area, No-Rinse, Plant-based</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B01NBL6TV9?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B01NBL6TV9?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-colgate-prevident-5000-ppm-booster-plus-toothpaste-spearmint-100ml-fluoride-enam">
+            <div class="card-rank">#6</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/5612670/pexels-photo-5612670.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Colgate PreviDent 5000 ppm Booster Plus Toothpaste - Spearmint, 100mL - Fluoride Enamel Protection, Sensitive Teeth Relief, Travel Size - Dentifrice for Daily Oral Care (Package May Vary)"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Colgate PreviDent 5000 ppm Booster Plus Toothpaste - Spearmint, 100mL - Fluoride Enamel Protection, Sensitive Teeth Relief, Travel Size - Dentifrice for Daily Oral Care (Package May Vary)</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B00FGORS28?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B00FGORS28?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-boka-toothpaste-fluoride-free-nano-hydroxyapatite-toothpaste-appropriate-for-sen">
+            <div class="card-rank">#7</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/7622551/pexels-photo-7622551.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Boka Toothpaste - Fluoride Free, Nano Hydroxyapatite Toothpaste | Appropriate for Sensitive Teeth - Adult Oral Care - Ela Mint - 4 Oz, 1PK"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Boka Toothpaste - Fluoride Free, Nano Hydroxyapatite Toothpaste | Appropriate for Sensitive Teeth - Adult Oral Care - Ela Mint - 4 Oz, 1PK</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B083JHCCV2?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B083JHCCV2?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-the-ordinary-niacinamide-10-zinc-1-smoothing-serum-for-blemish-prone-skin-30-ml">
+            <div class="card-rank">#8</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/14920158/pexels-photo-14920158.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="The Ordinary Niacinamide 10% + Zinc 1%, Smoothing Serum for Blemish-Prone Skin, 30 ml"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">The Ordinary Niacinamide 10% + Zinc 1%, Smoothing Serum for Blemish-Prone Skin, 30 ml</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B01MDTVZTZ?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B01MDTVZTZ?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-botanic-hearth-rosemary-hair-oil-for-hair-scalp-6-7-fl-oz-lightweight-hair-oil-f">
+            <div class="card-rank">#9</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/28994390/pexels-photo-28994390.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Botanic Hearth Rosemary Hair Oil for Hair & Scalp, 6.7 Fl Oz | Lightweight Hair Oil for Daily Hair Care, Suitable for All Hair Types"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Botanic Hearth Rosemary Hair Oil for Hair & Scalp, 6.7 Fl Oz | Lightweight Hair Oil for Daily Hair Care, Suitable for All Hair Types</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0C6XJMSGP?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0C6XJMSGP?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-rael-miracle-invisible-spot-cover-hydrocolloid-acne-pimple-patches-96-ct-ultra-t">
+            <div class="card-rank">#10</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/6476074/pexels-photo-6476074.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Rael Miracle Invisible Spot Cover Hydrocolloid Acne Pimple Patches (96 Ct) | Ultra-Thin Patch for Face, Absorbs Fluid From Blemishes, Facial Sticker, Korean Skin Care, Pore Care, 2 Sizes"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Rael Miracle Invisible Spot Cover Hydrocolloid Acne Pimple Patches (96 Ct) | Ultra-Thin Patch for Face, Absorbs Fluid From Blemishes, Facial Sticker, Korean Skin Care, Pore Care, 2 Sizes</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B07G1VKCND?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B07G1VKCND?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-apple-airpods-5-with-wired-charging-case-bluetooth-headphones-active-noise-cance">
+            <div class="card-rank">#11</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/5099868/pexels-photo-5099868.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Apple AirPods 5 with Wired Charging Case | Bluetooth Headphones, Active Noise Cancellation, Live Translation, USB-C Charging Case, H2 Chip"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Electronics</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Apple AirPods 5 with Wired Charging Case | Bluetooth Headphones, Active Noise Cancellation, Live Translation, USB-C Charging Case, H2 Chip</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0HJB9DZ7G?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0HJB9DZ7G?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-e-l-f-cream-glide-lip-liner-creamy-high-pigment-dark-cocoa-semi-matte-finish-cre">
+            <div class="card-rank">#12</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/31251090/pexels-photo-31251090.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="e.l.f. Cream Glide Lip Liner, Creamy High-Pigment, Dark Cocoa | Semi-Matte Finish, Creamy Application, Smooth Glide Lip Pencil, Defines & Shapes, Vegan & Cruelty-Free"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Health & Beauty</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">e.l.f. Cream Glide Lip Liner, Creamy High-Pigment, Dark Cocoa | Semi-Matte Finish, Creamy Application, Smooth Glide Lip Pencil, Defines & Shapes, Vegan & Cruelty-Free</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0CMYTMYHQ?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0CMYTMYHQ?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-pipishell-full-motion-tv-wall-mount-for-26-74-inch-tvs-up-to-99lbs-max-vesa-400x">
+            <div class="card-rank">#13</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/6980724/pexels-photo-6980724.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Pipishell Full Motion TV Wall Mount for 26-74 inch TVs, up to 99lbs Max VESA 400x400mm, Wall Mount TV Bracket with Articulating Swivel Extension Tilting Leveling for LED LCD OLED 4K Flat Curved Screen"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Electronics</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Pipishell Full Motion TV Wall Mount for 26-74 inch TVs, up to 99lbs Max VESA 400x400mm, Wall Mount TV Bracket with Articulating Swivel Extension Tilting Leveling for LED LCD OLED 4K Flat Curved Screen</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B09MQKK4TW?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B09MQKK4TW?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-apple-airpods-pro-3-wireless-earbuds-active-noise-cancellation-live-translation-">
+            <div class="card-rank">#14</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/10421388/pexels-photo-10421388.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Apple AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, Live Translation, Heart Rate Sensing, Bluetooth Headphones, Spatial Audio, High-Fidelity Sound, USB-C Charging"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Electronics</span>
+                    <span class="card-heat">⚡ Trending</span>
+                </div>
+                <h2 class="card-title">Apple AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, Live Translation, Heart Rate Sensing, Bluetooth Headphones, Spatial Audio, High-Fidelity Sound, USB-C Charging</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0FQG8RW95?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0FQG8RW95?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-amazon-basics-high-density-round-foam-roller">
+            <div class="card-rank">#15</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/39059979/pexels-photo-39059979.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Amazon Basics High-Density Round Foam Roller"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Sports & Outdoors</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Amazon Basics High-Density Round Foam Roller</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B071P2MQ5D?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B071P2MQ5D?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-melitta-625000-bamboo-super-premium-coffee-filters-green">
+            <div class="card-rank">#16</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/9212888/pexels-photo-9212888.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Melitta 625000 Bamboo Super Premium Coffee Filters, Green"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Kitchen</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Melitta 625000 Bamboo Super Premium Coffee Filters, Green</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B00CHILRF0?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B00CHILRF0?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-bedsure-throw-blankets-room-decor-women-birthday-gift-soft-fluffy-fleece-cozy-fu">
+            <div class="card-rank">#17</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/27515139/pexels-photo-27515139.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Bedsure Throw Blankets Room Decor - Women Birthday Gift, Soft Fluffy Fleece Cozy Fuzzy Plush Warm White Blanket for Couch Sofa Bed, Bedroom Livingroom Decor, 50x60"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Kitchen</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Bedsure Throw Blankets Room Decor - Women Birthday Gift, Soft Fluffy Fleece Cozy Fuzzy Plush Warm White Blanket for Couch Sofa Bed, Bedroom Livingroom Decor, 50x60</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0BPLB81LX?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0BPLB81LX?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-bamboo-viscose-waterproof-mattress-protector-queen-size-fits-17-deep-utopia-bedd">
+            <div class="card-rank">#18</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/30047530/pexels-photo-30047530.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="Bamboo Viscose Waterproof Mattress Protector Queen Size, fits 17" deep | Utopia Bedding Cooling Mattress Cover, Soft Breathable Mattress Pad, Noiseless, Fitted Style, Stretchable Pockets, Washable"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Kitchen</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">Bamboo Viscose Waterproof Mattress Protector Queen Size, fits 17" deep | Utopia Bedding Cooling Mattress Cover, Soft Breathable Mattress Pad, Noiseless, Fitted Style, Stretchable Pockets, Washable</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B01E02DU0U?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B01E02DU0U?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-pack-of-2-remote-control-for-roku-tv-remote-replacement-for-tcl-hisense-sharp-ph">
+            <div class="card-rank">#19</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/5202957/pexels-photo-5202957.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="（Pack of 2） Remote Control for Roku TV Remote Replacement for TCL Hisense Sharp Philips RCA Onn Sanyo Jvc Insignia Westinghouse Roku Smart TVs, 2 Pack"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Electronics</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">（Pack of 2） Remote Control for Roku TV Remote Replacement for TCL Hisense Sharp Philips RCA Onn Sanyo Jvc Insignia Westinghouse Roku Smart TVs, 2 Pack</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0F6WD4BMQ?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0F6WD4BMQ?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+        <article class="product-card" id="p-jbl-tune-670nc-adaptive-noise-cancelling-with-smart-ambient-wireless-on-ear-head">
+            <div class="card-rank">#20</div>
+            <div class="card-image"><img src="https://images.pexels.com/photos/20285556/pexels-photo-20285556.jpeg?auto=compress&cs=tinysrgb&h=350" loading="lazy" alt="JBL Tune 670NC - Adaptive Noise Cancelling with Smart Ambient Wireless On-Ear Headphones, Up to 70H Battery Life with Speed Charge, Lightweight, Comfortable and Foldable Design (Black)"></div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="card-category">Electronics</span>
+                    <span class="card-heat hot">🔥 Hot</span>
+                </div>
+                <h2 class="card-title">JBL Tune 670NC - Adaptive Noise Cancelling with Smart Ambient Wireless On-Ear Headphones, Up to 70H Battery Life with Speed Charge, Lightweight, Comfortable and Foldable Design (Black)</h2>
+                <div class="card-sources"><span class="source-tag">Amazon Ca</span></div>
+            </div>
+            <div class="card-actions">
+                <a href="https://www.amazon.ca/dp/B0CT9MB4WR?tag=thetrendmar00-20" class="shop-btn shop-btn-ca" target="_blank" rel="noopener nofollow sponsored">🇨🇦 Shop on Amazon.ca <span class="btn-arrow">→</span></a>
+                <a href="https://www.amazon.com/dp/B0CT9MB4WR?tag=thetrendmar0c-20" class="shop-btn shop-btn-us" target="_blank" rel="noopener nofollow sponsored">🇺🇸 Shop on Amazon.com <span class="btn-arrow">→</span></a>
+            </div>
+        </article>
+      </div>
+    </div>
+    <aside class="archive-sidebar" id="archive-sidebar" data-current-date="2026-10-23">
+    <details class="archive-nav" id="archiveNav" open>
+      <summary class="archive-nav-summary">Past 30 Days</summary>
+      <div class="archive-nav-list">
+        <a href="index.html" class="archive-active"><span class="archive-date-label">Oct 23, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-22.html"><span class="archive-date-label">Oct 22, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-21.html"><span class="archive-date-label">Oct 21, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-20.html"><span class="archive-date-label">Oct 20, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-19.html"><span class="archive-date-label">Oct 19, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-18.html"><span class="archive-date-label">Oct 18, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-17.html"><span class="archive-date-label">Oct 17, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-16.html"><span class="archive-date-label">Oct 16, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-15.html"><span class="archive-date-label">Oct 15, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-14.html"><span class="archive-date-label">Oct 14, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-13.html"><span class="archive-date-label">Oct 13, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-12.html"><span class="archive-date-label">Oct 12, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-11.html"><span class="archive-date-label">Oct 11, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-10.html"><span class="archive-date-label">Oct 10, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-09.html"><span class="archive-date-label">Oct 09, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-08.html"><span class="archive-date-label">Oct 08, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-07.html"><span class="archive-date-label">Oct 07, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-06.html"><span class="archive-date-label">Oct 06, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-05.html"><span class="archive-date-label">Oct 05, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-04.html"><span class="archive-date-label">Oct 04, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-03.html"><span class="archive-date-label">Oct 03, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-02.html"><span class="archive-date-label">Oct 02, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-10-01.html"><span class="archive-date-label">Oct 01, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-30.html"><span class="archive-date-label">Sep 30, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-29.html"><span class="archive-date-label">Sep 29, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-28.html"><span class="archive-date-label">Sep 28, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-27.html"><span class="archive-date-label">Sep 27, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-26.html"><span class="archive-date-label">Sep 26, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-25.html"><span class="archive-date-label">Sep 25, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-24.html"><span class="archive-date-label">Sep 24, 2026</span><span class="archive-date-count">20</span></a>
+        <a href="2026-09-23.html"><span class="archive-date-label">Sep 23, 2026</span><span class="archive-date-count">20</span></a>
+      </div>
+    </details>
+  </aside>
+  </div>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Trending Products — October 23, 2026", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Amazon Basics Neoprene Dumbbell Hand Weights", "url": "https://www.amazon.ca/dp/B01LR5S6HK?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/4793257/pexels-photo-4793257.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 2, "name": "YETI Rambler 16 oz Travel Bottle, Stainless Steel, Vacuum Insulated with Leakproof Commuter Cap, Black", "url": "https://www.amazon.ca/dp/B0F9ZWXM26?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/6378651/pexels-photo-6378651.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 3, "name": "GUM Advanced Care Flosser Picks, Infused with Vitamin E & fluroide, Fresh Mint Flavour, Blue, 150 flossers (1 Bag)", "url": "https://www.amazon.ca/dp/B074Q537B9?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/5938299/pexels-photo-5938299.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 4, "name": "NEENCA Professional Knee Brace, Medical Knee Support for Women & Men Relief", "url": "https://www.amazon.ca/dp/B07R71Z4NS?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/38527686/pexels-photo-38527686.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 5, "name": "Neutrogena All-in-One Makeup Removing Cleansing Wipes, Twin Pack, 50 Count | Gentle Makeup Remover Wipe, Removes Waterproof Mascara, Micellar, Alcohol-Free for Sensitive Eye Area, No-Rinse, Plant-based", "url": "https://www.amazon.ca/dp/B01NBL6TV9?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/9246298/pexels-photo-9246298.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 6, "name": "Colgate PreviDent 5000 ppm Booster Plus Toothpaste - Spearmint, 100mL - Fluoride Enamel Protection, Sensitive Teeth Relief, Travel Size - Dentifrice for Daily Oral Care (Package May Vary)", "url": "https://www.amazon.ca/dp/B00FGORS28?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/5612670/pexels-photo-5612670.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 7, "name": "Boka Toothpaste - Fluoride Free, Nano Hydroxyapatite Toothpaste | Appropriate for Sensitive Teeth - Adult Oral Care - Ela Mint - 4 Oz, 1PK", "url": "https://www.amazon.ca/dp/B083JHCCV2?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/7622551/pexels-photo-7622551.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 8, "name": "The Ordinary Niacinamide 10% + Zinc 1%, Smoothing Serum for Blemish-Prone Skin, 30 ml", "url": "https://www.amazon.ca/dp/B01MDTVZTZ?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/14920158/pexels-photo-14920158.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 9, "name": "Botanic Hearth Rosemary Hair Oil for Hair & Scalp, 6.7 Fl Oz | Lightweight Hair Oil for Daily Hair Care, Suitable for All Hair Types", "url": "https://www.amazon.ca/dp/B0C6XJMSGP?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/28994390/pexels-photo-28994390.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 10, "name": "Rael Miracle Invisible Spot Cover Hydrocolloid Acne Pimple Patches (96 Ct) | Ultra-Thin Patch for Face, Absorbs Fluid From Blemishes, Facial Sticker, Korean Skin Care, Pore Care, 2 Sizes", "url": "https://www.amazon.ca/dp/B07G1VKCND?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/6476074/pexels-photo-6476074.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 11, "name": "Apple AirPods 5 with Wired Charging Case | Bluetooth Headphones, Active Noise Cancellation, Live Translation, USB-C Charging Case, H2 Chip", "url": "https://www.amazon.ca/dp/B0HJB9DZ7G?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/5099868/pexels-photo-5099868.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 12, "name": "e.l.f. Cream Glide Lip Liner, Creamy High-Pigment, Dark Cocoa | Semi-Matte Finish, Creamy Application, Smooth Glide Lip Pencil, Defines & Shapes, Vegan & Cruelty-Free", "url": "https://www.amazon.ca/dp/B0CMYTMYHQ?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/31251090/pexels-photo-31251090.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 13, "name": "Pipishell Full Motion TV Wall Mount for 26-74 inch TVs, up to 99lbs Max VESA 400x400mm, Wall Mount TV Bracket with Articulating Swivel Extension Tilting Leveling for LED LCD OLED 4K Flat Curved Screen", "url": "https://www.amazon.ca/dp/B09MQKK4TW?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/6980724/pexels-photo-6980724.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 14, "name": "Apple AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, Live Translation, Heart Rate Sensing, Bluetooth Headphones, Spatial Audio, High-Fidelity Sound, USB-C Charging", "url": "https://www.amazon.ca/dp/B0FQG8RW95?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/10421388/pexels-photo-10421388.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 15, "name": "Amazon Basics High-Density Round Foam Roller", "url": "https://www.amazon.ca/dp/B071P2MQ5D?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/39059979/pexels-photo-39059979.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 16, "name": "Melitta 625000 Bamboo Super Premium Coffee Filters, Green", "url": "https://www.amazon.ca/dp/B00CHILRF0?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/9212888/pexels-photo-9212888.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 17, "name": "Bedsure Throw Blankets Room Decor - Women Birthday Gift, Soft Fluffy Fleece Cozy Fuzzy Plush Warm White Blanket for Couch Sofa Bed, Bedroom Livingroom Decor, 50x60", "url": "https://www.amazon.ca/dp/B0BPLB81LX?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/27515139/pexels-photo-27515139.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 18, "name": "Bamboo Viscose Waterproof Mattress Protector Queen Size, fits 17\" deep | Utopia Bedding Cooling Mattress Cover, Soft Breathable Mattress Pad, Noiseless, Fitted Style, Stretchable Pockets, Washable", "url": "https://www.amazon.ca/dp/B01E02DU0U?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/30047530/pexels-photo-30047530.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 19, "name": "（Pack of 2） Remote Control for Roku TV Remote Replacement for TCL Hisense Sharp Philips RCA Onn Sanyo Jvc Insignia Westinghouse Roku Smart TVs, 2 Pack", "url": "https://www.amazon.ca/dp/B0F6WD4BMQ?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/5202957/pexels-photo-5202957.jpeg?auto=compress&cs=tinysrgb&h=350"}, {"@type": "ListItem", "position": 20, "name": "JBL Tune 670NC - Adaptive Noise Cancelling with Smart Ambient Wireless On-Ear Headphones, Up to 70H Battery Life with Speed Charge, Lightweight, Comfortable and Foldable Design (Black)", "url": "https://www.amazon.ca/dp/B0CT9MB4WR?tag=thetrendmar00-20", "image": "https://images.pexels.com/photos/20285556/pexels-photo-20285556.jpeg?auto=compress&cs=tinysrgb&h=350"}]}</script>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="social-links">
+      <a href="https://tiktok.com/@TheTrendMarketplace" class="social-link" target="_blank" rel="noopener">TikTok</a><a href="https://instagram.com/thetrendmarketplacehq" class="social-link" target="_blank" rel="noopener">Instagram</a><a href="https://youtube.com/@TheTrendMarketplace" class="social-link" target="_blank" rel="noopener">YouTube</a><a href="https://pinterest.com/thetrendmarketplacehq" class="social-link" target="_blank" rel="noopener">Pinterest</a><a href="https://facebook.com/thetrendmarketplacehq" class="social-link" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <p class="brand-name">The Trend Marketplace</p>
+    <p class="footer-note">
+      As an Amazon Associate, The Trend Marketplace earns from qualifying purchases.
+      Links are affiliate links — shopping through them supports this channel at no extra cost to you.
+      <br>
+      Photos via <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a>
+      &nbsp;·&nbsp; <a href="https://linktr.ee/thetrendmarketplace" target="_blank">All Links</a>
+    </p>
+    <p class="disclosure">
+      Links on this page are affiliate links; we may earn a commission at no extra cost to you. #ad
+    </p>
+  </div>
+</footer>
+
+<!-- Dynamic archive re-render: rebuilds the sidebar list from the JSON manifest at
+     runtime. archive.py trims this script to a mobile-collapse stub on prior dated
+     pages, so keep its shape (IIFE form, manifest fetch) intact. -->
+<script>
+  (function () {
+    var aside = document.querySelector('.archive-sidebar');
+    if (!aside) return;
+    var current = aside.getAttribute('data-current-date') || '';
+    fetch('archive.json')
+      .then(function (r) { return r.json(); })
+      .then(function (manifest) {
+        var nav = document.getElementById('archiveNav');
+        if (!nav || !Array.isArray(manifest) || !manifest.length) return;
+        var list = nav.querySelector('.archive-nav-list');
+        if (!list) return;
+        var mon = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        var recent = manifest[0].date;
+        list.innerHTML = manifest.map(function (e) {
+          var parts = (e.date || '').split('-');
+          var label = (parts.length === 3)
+            ? mon[parseInt(parts[1], 10) - 1] + ' ' + parts[2] + ', ' + parts[0]
+            : e.date;
+          var href = (e.date === recent) ? 'index.html' : (e.url || (e.date + '.html'));
+          var active = (e.date === current) ? ' class="archive-active"' : '';
+          var count = e.product_count || 0;
+          return '<a href="' + href + '"' + active + '>'
+               + '<span class="archive-date-label">' + label + '</span>'
+               + '<span class="archive-date-count">' + count + '</span></a>';
+        }).join('\n');
+        if (window.innerWidth < 900) nav.removeAttribute('open');
+      })
+      .catch(function () { /* keep baked-in fallback list */ });
+  })();
+</script>
+
+
+<script>
+(function () {
+  var LOG_URL = 'https://ttm-clicks.trendmarketplace.workers.dev';
+  if (!LOG_URL || navigator.webdriver) return;
+  document.addEventListener('click', function (ev) {
+    var t = ev.target;
+    if (!t || !t.closest) return;
+    var a = t.closest('a.shop-btn');
+    if (!a) return;
+    var card = a.closest('article[id^="p-"]');
+    if (!card) return;
+    try {
+      navigator.sendBeacon(LOG_URL + '/c', JSON.stringify({
+        id: card.id.slice(2),
+        cc: a.classList.contains('shop-btn-ca') ? 'CA' : 'US'
+      }));
+    } catch (e) { /* never block the click */ }
+  }, true);
+})();
+</script>
+</body>
+</html>
